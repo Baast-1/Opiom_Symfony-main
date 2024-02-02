@@ -1,0 +1,8 @@
+{{ form_start(form) }}
+    <div class="espacement">
+        {{ form_widget(form) }}
+        <div class="correction">
+            <button class="valider" >{{ button_label|default('Valider') }}</button>
+        </div>
+    </div>
+{{ form_end(form) }}

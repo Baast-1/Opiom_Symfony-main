@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CONSULTER L'EVENEMENT{% endblock %}
+
+{% block body %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin: 10px; width: 90%;">
+    <div class='retour'>
+        <img src="{{ asset('img/chevron-left.svg') }}" alt="logo profil">
+        <a class="retour" href="{{ path('app_liste_event_index') }}">Retour</a>
+    </div>
+    <div class='etat'>
+        <p style="margin: 10px;">{{ liste_event.etat }}</p>
+        <img src="{{ asset('img/Icon awesome-check-circle.svg') }}" alt="logo profil">
+    </div>
+</div>
+
+    <h1 class='showevent'>CONSULTER L'EVENEMENT</h1>
+
+    <div class="row">
+        <div class="left-column">
+            <table class="table-profil">
+                <tbody>
+                    <tr>
+                        <td colspan="2"><span style="font-weight: bold; margin-bottom: 80px;">Contact Organisateur</span></td>
+                    </tr>
+                    <tr>
+                        <td class="td-table-profil" colspan="2"><img src="{{ asset('img/profil.svg') }}" alt="logo profil" style="scale: 0.8"></td>
+                    </tr>
+                    <div>
+                        <tr>
+                            <td class="td-table-profil">{{ liste_event.nom }} {{ liste_event.prenom }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-table-profil">{{ liste_event.telephone }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-table-profil">{{ liste_event.nomEntreprise }}</td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="right-column">
+            <table class="tabler">
+                <tbody>
+                    <tr>
+                        <th>Nom de l'événement</th>
+                        <th>Nombre de personnes</th>
+                        <th></th>
+                        <th></th>
+                        <th><a class="btn" href="{{ path('app_liste_event_edit', {'id': liste_event.id}) }}"><button class="editer">EDITER</button></a></th>
+                        <th>{{ include('liste_event/_delete_form.html.twig') }}</th>
+                    </tr>
+                    <tr>
+                        <td>{{ liste_event.titre }}</td>
+                        <td>{{ liste_event.capacite }}</td>
+                    </tr>
+                    <tr>
+                        <th>Navigation</th>
+                        <th>Bateau</th>
+                    </tr>
+                    <tr>
+                        <td>En Navigation</td>
+                        <td>{{ liste_event.bateau.nom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date de Début</th>
+                        <th>Heure de Début</th>
+                    </tr>
+                    <tr>
+                        <td>{{ liste_event.dateHeureDebut ? liste_event.dateHeureDebut|date('Y-m-d') : '' }}</td>
+                        <td>{{ liste_event.dateHeureDebut ? liste_event.dateHeureDebut|date('H:i') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date de Fin</th>
+                        <th>Heure de Fin</th>
+                    </tr>
+                    <tr>
+                        <td>{{ liste_event.dateHeureFin ? liste_event.dateHeureFin|date('Y-m-d') : '' }}</td>
+                        <td>{{ liste_event.dateHeureFin ? liste_event.dateHeureFin|date('H:i') : '' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            {#<div class="btn">
+                <a class="btn" href="{{ path('app_liste_event_edit', {'id': liste_event.id}) }}"><button class="valider">VALIDER</button></a>
+                {{ include('liste_event/_cancel_form.html.twig') }}
+            </div> #}
+        </div>
+    </div>
+{% endblock %}
+

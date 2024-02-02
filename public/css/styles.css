@@ -1,0 +1,488 @@
+/* public/css/styles.css */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+}
+
+.login-form button {
+    margin-top: 15px;
+}
+
+
+button.connexion{
+
+    background-color: #073056;
+    font-family: "sweet-sans-pro", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:18px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 25%;
+    transition: 0.15s ease-in-out;
+    border: 2px solid white ;
+    cursor: pointer;
+    
+}
+
+button.connexion:hover{
+    background-color: white;
+    border: 2px solid #073056 ;
+    color: #073056;
+}
+
+input.connexion{
+    border: none;
+    background-color:#F2F2F2 ;
+    border-radius: 100px;
+    height: 6vh;
+    padding-left:30px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+
+.table-col-aligned {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.table-col-aligned th,
+.table-col-aligned td {
+    text-align: left;
+}
+
+.table-col-aligned {
+    width: 100%;
+}
+
+.table-col-aligned th,
+.table-col-aligned td {
+    text-align: left;
+    padding: 15px 10px;; /* Ajoutez une marge intérieure pour un meilleur aspect visuel */
+}
+
+/* Style des lignes impaires */
+.table-col-aligned tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Fond gris pour les lignes impaires */
+    
+
+}
+
+/* Logo et Titre colonnes */
+.table-header img {
+    display: inline-block;
+    vertical-align: middle; /* Alignement vertical au milieu */
+    margin-right: 5px; /* Espacement entre l'image et le texte */
+}
+
+.table-header span {
+    display: inline-block;
+    vertical-align: middle; /* Alignement vertical au milieu */
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Ajoute une marge en bas pour l'espace visuel */
+    width: 90%;
+    margin-left: 5%;
+}
+
+.create-new-btn {
+    padding: 10px;
+    background-color: #073056; /* Couleur de fond du bouton (à ajuster selon votre style) */
+    color: #fff; /* Couleur du texte du bouton */
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: "sweet-sans-pro", sans-serif;
+    
+}
+
+.table-col-aligned{
+    width: 90%;
+    margin-left: 5%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.create-new-btn {
+    font-family: "sweet-sans-pro", sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 700;
+    font-style: normal;
+    font-size:16px;
+}
+
+h1{
+    font-family: "sweet-sans-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:25px;
+
+}
+
+
+
+button.connexion{
+
+    background-color: #073056;
+    font-family: "sweet-sans-pro", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:18px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 20%;
+    transition: 0.15s ease-in-out;
+    border: 2px solid white ;
+    cursor: pointer;
+    
+}
+
+button.connexion:hover{
+    background-color: white;
+    border: 2px solid #073056 ;
+    color: #073056;
+}
+
+
+input.form{
+    border: none;
+    background-color:#F2F2F2 ;
+    border-radius: 5px;
+    height: 6vh;
+    padding-left:30px;
+    padding-right: 10px;
+    width: 100%;
+    align-items: center;
+    margin: 20px auto; /* Ajoute une marge autour du formulaire et centre-le horizontalement */
+    max-width: 400px; /* Définit une largeur maximale pour le formulaire */
+    text-align: center; /* Centre le contenu du formulaire */
+    
+}
+
+/* Ajoutez ce style à votre fichier CSS ou à la section de style de votre fichier HTML/Twig */
+
+/* Conteneur principal */
+.row {
+    display: flex;
+}
+
+/* Colonne de gauche avec fond gris */
+.left-column {
+    flex: 0 0 20%; /* Fixe la largeur à 40% de l'écran */
+    background-color: #f0f0f0; /* Couleur de fond gris clair */
+    height: auto;
+    padding: 20px;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center;
+    height: 500px;
+}
+
+.table-profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scale: 0.95;
+    
+}
+
+.td-table-profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table {
+    scale: 0.95;
+}
+
+/* Colonne de droite */
+.right-column {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Alignement des libellés avec les variables dans la colonne de droite */
+.right-column table th {
+    text-align: left; /* Alignement à gauche des libellés */
+    
+}
+
+/* Ajout d'un espacement entre les informations dans la colonne de droite */
+
+
+/* Ajoutez d'autres styles selon vos préférences */
+h1.showevent{
+    margin-left: 5%;
+
+}
+
+.tabler{
+    border-spacing: 40px;
+}
+
+div.btn{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+form.btn{
+    width: 20%;
+}
+
+a.btn{
+    width: 20%;
+}
+
+div.retour{
+    margin-left: 5%;
+    display: flex;
+    
+    gap: 5px;
+}
+
+a.retour{
+    color: #073056;
+    text-decoration: none;
+}
+
+
+
+div.espacement{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.label-above {
+    display: block;
+    margin-bottom: 3px; /* Ajustez selon vos préférences */
+    font-weight: bold;
+}
+
+button.valider{
+    background-color: #073056;
+    font-family: "sweet-sans-pro", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:18px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    transition: 0.15s ease-in-out;
+    border: 2px solid white ;
+    cursor: pointer;
+    
+}
+
+button.valider:hover{
+    background-color: white;
+    border: 2px solid #073056 ;
+    color: #073056;
+}
+
+a.editer {
+    text-decoration: none;
+}
+
+button.editer{
+    background-color: #073056;
+    font-family: "sweet-sans-pro", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:14px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 126px;
+    height: 30px;
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+
+button.editer:hover{
+    background-color: white;
+    border: 2px solid #073056 ;
+    color: #073056;
+}
+
+
+
+button.supprimer {
+    font-family: "sweet-sans-pro", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 14px;
+    color: #F2F2F2;
+    background-color: #D86868;
+    border-bottom: 1px solid #D86868;
+    width: 126px;
+    height: 30px;
+    border-radius: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+button.supprimer:hover {
+    background-color: #F2F2F2;
+    color: #D86868;
+    border: 2px solid #D86868;
+}
+
+#liste_event{
+    width: 50%;
+    
+}
+
+div.correction{
+    width: 20%;
+}
+
+h2.titre{
+    margin-left: 4%;
+}
+
+
+div.ghetto{
+    background-color: #073056;
+    padding: 2px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 50px;
+    display: flex;
+}
+
+.bat-cal{
+    color: #073056;
+    text-decoration: none;
+    font-family: "sweet-sans-pro", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:20px;
+}
+
+.bat-cal:hover{
+    border-bottom: 1px solid #073056;
+}
+.bat-cal-selec{
+    color: #073056;
+    text-decoration: none;
+    border-bottom: 1px solid #073056;
+    font-family: "sweet-sans-pro", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:20px;
+}
+
+
+.bat-container {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    align-items: center;
+    margin-bottom: 20px; /* Ajoute une marge en bas pour l'espace visuel */
+    width: 90%;
+    margin-left: 5%;
+}
+
+.voir_plus {
+    font-weight: bold;
+    text-decoration: none;
+    color: #073056;
+}
+
+.voir_plus:hover {
+    font-weight: bold;
+    border-bottom: 1px solid #073056;
+}
+
+.forgot {
+    text-decoration: none;
+    color: #073056;
+    border-bottom: 1px solid #073056;
+}
+
+.forgot:hover { 
+    font-weight: bold;
+}
+
+
+.form-select {
+    /* Styles personnalisés pour le champ de sélection */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 41px;
+    width: 241px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #F2F2F2;
+    /* Ajoutez d'autres styles au besoin */
+}
+
+.etat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

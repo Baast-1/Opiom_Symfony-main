@@ -1,0 +1,135 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    <div class="header-container">
+    
+    
+       
+       
+
+        <h1>CALENDRIER DES EVENEMENTS</h1>
+        <a href="{{ path('app_liste_event_new') }}" class="create-new-btn">Nouvelle Demande</a>
+    </div>
+    {# <div>
+        <form id="filterForm" method="post" action="{{ path('app_booking_calendar') }}">
+            <label for="bateauSelect">Sélectionnez un bateau :</label>
+            <select id="bateauSelect" name="bateau">
+                
+                {% for bateau in bateaux %}
+                    <option value="{{ bateau.id }}">{{ bateau.nom }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Appliquer</button>
+        </form> 
+    </div> #}
+    <div class="bat-container">
+        <a href="{{ path('app_booking_calendar') }}" class="bat-cal">Burdigala1</a>
+        <a href="{{ path('app_booking_calendar2') }}" class="bat-cal">Burdigala2</a>
+        
+        <a href="{{ path('app_booking_calendar3') }}" class="bat-cal-selec">Aquitania</a>
+
+
+    </div>
+
+    <div id="calendar-holder" style="width: 90%; margin: auto;"></div>
+{% endblock %}
+{% block stylesheets %}
+   {{ parent() }}
+   <style>
+       .fc-toolbar-chunk{
+        display:flex;
+       }
+
+       .fc-col-header{
+           background-color: #f2f2f2; /* Remplacez cette couleur par celle que vous souhaitez utiliser */
+           height:12vh !important;
+       }
+
+       .fc td, .fc th{
+        vertical-align:middle ;
+       }
+
+       .fc .fc-button-primary {
+        background-color: unset;
+        border-color: #ffff;
+        color: black;
+        }
+        .fc .fc-button-primary:hover {
+        background-color: unset;
+        border-color: #ffff;
+        color: black;
+}       
+.fc-timeGridWeek-view tbody tr:nth-child(odd) {
+           background-color: #ffffff; /* Couleur grise pour les lignes impaires */
+       }
+
+       .fc-timeGridWeek-view tbody tr:nth-child(even) {
+           background-color: #f2f2f2; /* Couleur blanche pour les lignes paires */
+       }
+
+       .fc-timeGridWeek-view tbody tr {
+           height: 60px; /* Ajustez cette valeur selon vos besoins */
+       }
+   </style>
+{% endblock %}
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js" integrity="sha256-dHUNnePy81fXq4D/wfu7cPsEIP7zl6MvLb84jtZf+UY=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            
+
+
+            var calendarEl = document.getElementById('calendar-holder');
+            {# var bateauSelect = document.getElementById('bateauSelect'); #}
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                defaultView: 'dayGridMonth',
+                locale:'fr',
+                editable: true,
+                eventSources: [
+                    {
+                        url: "{{ path('fc_load_events') }}",
+                        method: "POST",
+                        extraParams: {
+                            filters: JSON.stringify({
+                bateau: '3', // Replace 'selectedBateauIdHere' with the actual selected bateau id
+            })
+                            
+                        },
+                        failure: () => {
+                            // alert("There was an error while fetching FullCalendar!");
+                        },
+                    },
+                ],
+                headerToolbar: {
+                    center: 'prev title next',
+                    end: 'dayGridMonth,timeGridWeek'
+                },
+                buttonText: {
+                   today: 'Aujourd\'hui',
+                   month: 'Mois',
+                   week: 'Semaine',
+                   day: 'Jour'
+               },
+               allDaySlot: false,
+                timeZone: 'UTC',
+                dayHeaderFormat: { weekday: 'long', day: 'numeric', month: 'numeric' },
+
+                {# eventDidMount: function (info) {
+                    bateauSelect.addEventListener('change', function () {
+                        // Mettez à jour les événements lors du changement de sélection du bateau
+                        calendar.getEventSourceById('events').updateData({
+                            filters: { bateau: bateauSelect.value }
+                        });
+                    });
+                } #}
+                
+            });
+            calendar.render();
+        });
+    </script>
+{% endblock %}

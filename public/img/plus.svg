@@ -1,0 +1,11 @@
+<svg id="Groupe_2009" data-name="Groupe 2009" xmlns="http://www.w3.org/2000/svg" width="19.868" height="19.868" viewBox="0 0 19.868 19.868">
+  <g id="Groupe_2007" data-name="Groupe 2007">
+    <g id="Icon_feather-plus-square" data-name="Icon feather-plus-square" transform="translate(5.602 5.602)">
+      <path id="Tracé_1482" data-name="Tracé 1482" d="M18,12v8.664" transform="translate(-13.668 -12)" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Tracé_1483" data-name="Tracé 1483" d="M12,18h8.664" transform="translate(-12 -13.668)" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <g id="Selection_-_petite_taille" data-name="Selection - petite taille">
+      <path id="Icon_material-radio-button-unchecked" data-name="Icon material-radio-button-unchecked" d="M12.934,3a9.934,9.934,0,1,0,9.934,9.934A9.938,9.938,0,0,0,12.934,3Zm0,17.881a7.947,7.947,0,1,1,7.947-7.947A7.945,7.945,0,0,1,12.934,20.881Z" transform="translate(-3 -3)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LISTE DES EVENEMENTS{% endblock %}
+
+
+
+{% block body %}
+    <div class="header-container">
+        <h1>LISTE DES EVENEMENTS</h1>
+        
+        <div class="ghetto">
+            <img  src="{{ asset('img/plus.svg') }}" alt="logo profil">
+            <a href="{{ path('app_liste_event_new') }}" class="create-new-btn">Ajouter un event</a>
+        </div>
+    </div>
+    <table class="table table-col-aligned">
+        <thead>
+        <tr>
+            <th class="table-header">
+                <img src="{{ asset('img/tri_az.svg') }}" alt="logo_column">
+                <span>Nom de l'événement</span>
+            </th>
+            <th class="table-header">
+                <img src="{{ asset('img/tri_az.svg') }}" alt="logo_column">
+                <span>Nom</span>
+            </th>
+            <th class="table-header">
+                <img src="{{ asset('img/tri_az.svg') }}" alt="logo_column">
+                <span>Bateau</span>
+            </th>
+            <th class="table-header">
+                <img src="{{ asset('img/tri_az.svg') }}" alt="logo_column">
+                <span>Nombre de personne</span>
+            </th>
+            <th class="table-header">
+                <img src="{{ asset('img/tri_az.svg') }}" alt="logo_column">
+                <span>Date</span>
+            </th>
+            <th class="table-header">
+                <img src="{{ asset('img/tri_az.svg') }}" alt="logo_column">
+                <span>État</span>
+            </th>
+        </tr>
+    </thead>
+        <tbody>
+        {% for liste_event in liste_events %}
+            <tr>
+                
+                
+
+                <td>{{ liste_event.titre }}</td>
+                
+
+                <td>{{ liste_event.nom }}</td>
+                <td>{{ liste_event.bateau.nom }}</td>
+                
+                
+
+                <td>{{ liste_event.capacite }}</td>
+                <td>{{ liste_event.dateHeureDebut ? liste_event.dateHeureDebut|date('Y-m-d ') : '' }}</td>
+                <td>{{ liste_event.etat }}</td>
+                <td>
+                    <a class="voir_plus" href="{{ path('app_liste_event_show', {'id': liste_event.id}) }}">Voir+</a>
+                    
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

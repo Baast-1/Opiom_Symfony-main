@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}NOUVELLE EVENEMENT{% endblock %}
+
+{% block body %}
+
+    <div class='retour'>
+        <img  src="{{ asset('img/chevron-left.svg') }}" alt="logo profil">
+        <a class="retour" href="{{ path('app_liste_event_index') }}">Retour</a>
+    </div>
+    <h1 class="showevent">NOUVELLE EVENEMENT</h1>
+
+    <div class="center-form">
+        {{ include('liste_event/_form.html.twig') }}
+    </div>
+    
+{% endblock %}

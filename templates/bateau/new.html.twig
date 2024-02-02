@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Bateau{% endblock %}
+
+{% block body %}
+    <h1>Create new Bateau</h1>
+
+    {{ include('bateau/_form.html.twig') }}
+
+    <a href="{{ path('app_bateau_index') }}">back to list</a>
+{% endblock %}

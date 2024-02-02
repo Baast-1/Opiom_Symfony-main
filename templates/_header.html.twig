@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ asset('css/header.css') }}">
+
+<header class="opiom">
+    <img class="logo" src="{{ asset('img/croisieres_burdigala.png') }}" alt="logo entreprise">
+    {% if app.user %}
+    
+        <a href="/admin/liste_event" class="link">
+            <h2 class="header">LISTE DES EVENEMENTS</h2>
+        </a>
+        <a href="/admin/liste_event/calendar" class="link">
+            <h2 class="header">PLANNING</h2>
+        </a>
+        
+
+        
+
+        
+
+        <a href="/logout" class="link">
+            <section class="profil">
+                {#<img class="profil" src="{{ asset('img/profil.svg') }}" alt="profil">#}
+                <h2 class="headerB"></h2>
+            </section>
+        </a>
+    {% endif %}
+</header>

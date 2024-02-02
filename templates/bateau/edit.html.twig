@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Bateau{% endblock %}
+
+{% block body %}
+    <h1>Edit Bateau</h1>
+
+    {{ include('bateau/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_bateau_index') }}">back to list</a>
+
+    {{ include('bateau/_delete_form.html.twig') }}
+{% endblock %}

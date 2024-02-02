@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EDITER L'EVENEMENT{% endblock %}
+
+{% block body %}
+    <div class='retour'>
+        <img  src="{{ asset('img/chevron-left.svg') }}" alt="logo profil">
+        <a class="retour" href="{{ path('app_liste_event_index') }}">Retour</a>
+    </div>
+    <h1 class="showevent">EDITER L'EVEVENEMENT</h1>
+
+    {{ include('liste_event/_form.html.twig', {'button_label': 'METTRE A JOUR'}) }}
+
+    
+
+    
+{% endblock %}
